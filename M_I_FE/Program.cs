@@ -3,6 +3,7 @@ using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace M_I_FE
 {
@@ -10,6 +11,12 @@ namespace M_I_FE
     {
         static void Main(string[] args)
         {
+            Type type = typeof(ECF_31.ECFItemRetencion);
+            foreach (PropertyInfo property in type.GetProperties())
+            {
+                Console.WriteLine($"{property.Name} = Data[\"{property.Name}\"],");
+            }
+
             // Iniciar el cronómetro
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
