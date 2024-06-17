@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Datos\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.1.3" />
   </ItemGroup>
 

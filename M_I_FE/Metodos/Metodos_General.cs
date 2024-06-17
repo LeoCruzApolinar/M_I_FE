@@ -11,6 +11,15 @@ namespace M_I_FE.Metodos
 {
     public class Metodos_General
     {
+        public static string EliminarEspacios(string input)
+        {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input), "La cadena de entrada no puede ser null.");
+            }
+
+            return input.Replace(" ", string.Empty);
+        }
         public static bool EsNumero(string str)
         {
             return decimal.TryParse(str, out _);
@@ -32,6 +41,15 @@ namespace M_I_FE.Metodos
 
         public class XmlCorrector
         {
+            static string EliminarSaltosDeLinea(string input)
+            {
+                if (input == null)
+                {
+                    throw new ArgumentNullException(nameof(input), "La cadena de entrada no puede ser null.");
+                }
+
+                return input.Replace("\r", "").Replace("\n", "");
+            }
             public static string CorrectXml(string inputXml, string xsdPath = null)
             {
                 try

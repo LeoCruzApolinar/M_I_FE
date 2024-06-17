@@ -11,7 +11,7 @@ namespace M_I_FE
     {
         static void Main(string[] args)
         {
-            Type type = typeof(ECF_31.ECFItemRetencion);
+            Type type = typeof(ECF_47.ECFItemRetencion);
             foreach (PropertyInfo property in type.GetProperties())
             {
                 Console.WriteLine($"{property.Name} = Data[\"{property.Name}\"],");
@@ -21,25 +21,7 @@ namespace M_I_FE
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
-            var package = new ExcelPackage(new FileInfo("E:\\Proyectos\\SIFA_FE\\M_I_FE\\Data\\DataSet.xlsx"));
-
-            ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-
-            LeerXlsx leerXlsx = new LeerXlsx();
-
-            List<int> filas = leerXlsx.ObtenerXlsxSinEnviar(worksheet, worksheet.Dimension.End.Column);
-
-            List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
-
-            foreach (var fila in filas)
-            {
-                list.Add(leerXlsx.ObtenerXlsxFilaDic(fila, worksheet, worksheet.Dimension.End.Column));
-                Console.WriteLine(fila);
-            }
-
-            Metodos_XML.Generar_XML_ECF31(list[0]);
+            Metodos_XML.GenerarXML();
 
             // Detener el cronómetro
             stopwatch.Stop();

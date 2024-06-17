@@ -40,7 +40,7 @@ namespace M_I_FE.Metodos
                     }
 
                     // Asignar el valor de la celda de la fila de datos al diccionario, usando como clave el valor de la celda de la primera fila (encabezado)
-                    XlsxFila[key] = value;
+                    XlsxFila[Metodos_General.EliminarEspacios(key)] = value;
                 }
                 else
                 {
