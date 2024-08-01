@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace M_I_FE.Metodos
@@ -190,11 +191,11 @@ namespace M_I_FE.Metodos
                                 PrecioUnitarioItem = Metodos_General.TryParseDecimal(Data, $"PrecioUnitarioItem[{indice}]"),
                                 DescuentoMonto = Metodos_General.TryParseDecimal(Data, $"DescuentoMonto[{indice}]"),
                                 DescuentoMontoSpecified = Metodos_General.EsNumero(Data[$"DescuentoMonto[{indice}]"]),
-                                TablaSubDescuento = ObtenerTablaECFItemSubDescuento(Data),
+                                TablaSubDescuento = ObtenerTablaECFItemSubDescuento(Data, indice),
                                 RecargoMonto = Metodos_General.TryParseDecimal(Data, $"RecargoMonto[{indice}]"),
                                 RecargoMontoSpecified = Metodos_General.EsNumero(Data[$"RecargoMonto[{indice}]"]),
-                                TablaSubRecargo = ObtenerTablaECFItemSubRecargo(Data),
-                                TablaImpuestoAdicional = ObtenerTablaImpuestoAdicional(Data),
+                                TablaSubRecargo = ObtenerTablaECFItemSubRecargo(Data, indice),
+                                TablaImpuestoAdicional = ObtenerTablaImpuestoAdicional(Data, indice),
                                 OtraMonedaDetalle = new ECF_44.ECFItemOtraMonedaDetalle()
                                 {
                                     PrecioOtraMoneda = Metodos_General.TryParseDecimal(Data, $"PrecioOtraMoneda[{indice}]"),
@@ -259,25 +260,25 @@ namespace M_I_FE.Metodos
 
             }
 
-            public static ECF_44.ECFItemSubDescuento[] ObtenerTablaECFItemSubDescuento(Dictionary<string, string> Data)
+            public static ECF_44.ECFItemSubDescuento[] ObtenerTablaECFItemSubDescuento(Dictionary<string, string> Data, int ind)
             {
                 List<ECF_44.ECFItemSubDescuento> ListaECFItemSubDescuento = new List<ECF_44.ECFItemSubDescuento>();
                 int indice = 1;
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"TipoSubDescuento[{indice}]"))
+                    if (Data.ContainsKey($"TipoSubDescuento[{ind}][{indice}]"))
                     {
-                        if (Data[$"TipoSubDescuento[{indice}]"] != null)
+                        if (Data[$"TipoSubDescuento[{ind}][{indice}]"] != null)
                         {
 
                             ECF_44.ECFItemSubDescuento data = new ECF_44.ECFItemSubDescuento()
                             {
-                                TipoSubDescuento = ObtenerTipoGeneral<ECF_44.ECFItemSubDescuento>(Data[$"TipoSubDescuento[{indice}]"]),
-                                SubDescuentoPorcentaje = Metodos_General.TryParseDecimal(Data, $"SubDescuentoPorcentaje[{indice}]"),
-                                SubDescuentoPorcentajeSpecified = Metodos_General.EsNumero(Data[$"SubDescuentoPorcentaje[{indice}]"]),
-                                MontoSubDescuento = Metodos_General.TryParseDecimal(Data, $"MontoSubDescuento[{indice}]"),
-                                MontoSubDescuentoSpecified = Metodos_General.EsNumero(Data[$"MontoSubDescuento[{indice}]"]),
+                                TipoSubDescuento = ObtenerTipoGeneral<ECF_44.TipoDescuentoRecargoType>(Data[$"TipoSubDescuento[{ind}][{indice}]"]),
+                                SubDescuentoPorcentaje = Metodos_General.TryParseDecimal(Data, $"SubDescuentoPorcentaje[{ind}][{indice}]"),
+                                SubDescuentoPorcentajeSpecified = Metodos_General.EsNumero(Data[$"SubDescuentoPorcentaje[{ind}][{indice}]"]),
+                                MontoSubDescuento = Metodos_General.TryParseDecimal(Data, $"MontoSubDescuento[{ind}][{indice}]"),
+                                MontoSubDescuentoSpecified = Metodos_General.EsNumero(Data[$"MontoSubDescuento[{ind}][{indice}]"]),
                             };
                             // Agregar el objeto a la lista
                             ListaECFItemSubDescuento.Add(data);
@@ -297,25 +298,26 @@ namespace M_I_FE.Metodos
                 return ListaECFItemSubDescuento.Count == 0 ? default : ListaECFItemSubDescuento.ToArray();
             }
 
-            public static ECF_44.ECFItemSubRecargo[] ObtenerTablaECFItemSubRecargo(Dictionary<string, string> Data)
+            public static ECF_44.ECFItemSubRecargo[] ObtenerTablaECFItemSubRecargo(Dictionary<string, string> Data, int ind)
             {
                 List<ECF_44.ECFItemSubRecargo> ListaECFItemSubRecargo = new List<ECF_44.ECFItemSubRecargo>();
                 int indice = 1;
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"TipoSubRecargo[{indice}]"))
+                    if (Data.ContainsKey($"TipoSubRecargo[{ind}][{indice}]"))
                     {
-                        if (Data[$"TipoSubRecargo[{indice}]"] != null)
+                        if (Data[$"TipoSubRecargo[{ind}][{indice}]"] != null)
                         {
-
+                            Console.WriteLine(Data[$"MontosubRecargo[{ind}][{indice}]"]);
                             ECF_44.ECFItemSubRecargo data = new ECF_44.ECFItemSubRecargo()
                             {
-                                TipoSubRecargo = ObtenerTipoGeneral<ECF_44.ECFItemSubRecargo>($"TipoSubRecargo[{indice}]"),
-                                SubRecargoPorcentaje = Metodos_General.TryParseDecimal(Data, $"SubRecargoPorcentaje[{indice}]"),
-                                SubRecargoPorcentajeSpecified = Metodos_General.EsNumero(Data[$"SubRecargoPorcentaje[{indice}]"]),
-                                MontoSubRecargo = Metodos_General.TryParseDecimal(Data, $"MontoSubRecargo[{indice}]"),
-                                MontoSubRecargoSpecified = Metodos_General.EsNumero(Data[$"MontoSubRecargo[{indice}]"]),
+                                TipoSubRecargo = ObtenerTipoGeneral<ECF_44.TipoDescuentoRecargoType>($"TipoSubRecargo[{ind}][{indice}]"),
+                                SubRecargoPorcentaje = Metodos_General.TryParseDecimal(Data, $"SubRecargoPorcentaje[{ind}][{indice}]"),
+                                SubRecargoPorcentajeSpecified = Metodos_General.EsNumero(Data[$"SubRecargoPorcentaje[{ind}][{indice}]"]),
+                                MontoSubRecargoSpecified = Metodos_General.EsNumero(Data[$"MontosubRecargo[{ind}][{indice}]"]),
+                                MontoSubRecargo = Metodos_General.TryParseDecimal(Data, $"MontosubRecargo[{ind}][{indice}]"),
+
                             };
                             // Agregar el objeto a la lista
                             ListaECFItemSubRecargo.Add(data);
@@ -335,21 +337,23 @@ namespace M_I_FE.Metodos
                 return ListaECFItemSubRecargo.Count == 0 ? default : ListaECFItemSubRecargo.ToArray();
             }
 
-            public static ECF_44.ECFItemImpuestoAdicional[] ObtenerTablaImpuestoAdicional(Dictionary<string, string> Data)
+            public static ECF_44.ECFItemImpuestoAdicional[] ObtenerTablaImpuestoAdicional(Dictionary<string, string> Data, int ind)
             {
                 List<ECF_44.ECFItemImpuestoAdicional> ListaImpuestoAdicional = new List<ECF_44.ECFItemImpuestoAdicional>();
                 int indice = 1;
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"TipoSubRecargo[{indice}]"))
+                    if (Data.ContainsKey($"TipoImpuesto[{ind}][{indice}]"))
                     {
-                        if (Data[$"TipoSubRecargo[{indice}]"] != null)
+                        if (Data[$"TipoImpuesto[{ind}][{indice}]"] != null)
                         {
+
+                            var a = Data[$"TipoImpuesto[{ind}][{indice}]"];
 
                             ECF_44.ECFItemImpuestoAdicional data = new ECF_44.ECFItemImpuestoAdicional()
                             {
-                                TipoImpuesto = ObtenerTipoGeneral<ECF_44.ECFItemImpuestoAdicional>($"TipoImpuesto[{indice}]"),
+                                TipoImpuesto = ObtenerTipoGeneral<ECF_44.CodificacionTipoImpuestosType>(Data[$"TipoImpuesto[{ind}][{indice}]"]),
                             };
                             // Agregar el objeto a la lista
                             ListaImpuestoAdicional.Add(data);
@@ -373,12 +377,12 @@ namespace M_I_FE.Metodos
             {
                 List<ECF_44.ECFSubtotal> ListaSubtotales = new List<ECF_44.ECFSubtotal>();
                 int indice = 1;
-                while (Data != null)
+                if (Data != null)
                 {
 
-                    if (Data.ContainsKey($"NumeroSubTotal[{indice}]"))
+                    if (Data.ContainsKey($"NumeroSubTotal"))
                     {
-                        if (Data[$"NumeroSubTotal[{indice}]"] != null)
+                        if (Data[$"NumeroSubTotal"] != null)
                         {
 
                             ECF_44.ECFSubtotal data = new ECF_44.ECFSubtotal()
@@ -386,12 +390,12 @@ namespace M_I_FE.Metodos
                                 NumeroSubTotal = Data["NumeroSubTotal"],
                                 DescripcionSubtotal = Data["DescripcionSubtotal"],
                                 Orden = Data["Orden"],
-                                SubTotalImpuestoAdicional = Metodos_General.TryParseDecimal(Data, $"SubTotalImpuestoAdicional[{indice}]"),
-                                SubTotalImpuestoAdicionalSpecified = Metodos_General.EsNumero(Data[$"SubTotalImpuestoAdicional[{indice}]"]),
-                                SubTotalExento = Metodos_General.TryParseDecimal(Data, $"SubTotalExento[{indice}]"),
-                                SubTotalExentoSpecified = Metodos_General.EsNumero(Data[$"SubTotalExento[{indice}]"]),
-                                MontoSubTotal = Metodos_General.TryParseDecimal(Data, $"MontoSubTotal[{indice}]"),
-                                MontoSubTotalSpecified = Metodos_General.EsNumero(Data[$"MontoSubTotal[{indice}]"]),
+                                SubTotalImpuestoAdicional = Metodos_General.TryParseDecimal(Data, $"SubTotalImpuestoAdicional"),
+                                SubTotalImpuestoAdicionalSpecified = Metodos_General.EsNumero(Data[$"SubTotalImpuestoAdicional"]),
+                                SubTotalExento = Metodos_General.TryParseDecimal(Data, $"SubTotalExento"),
+                                SubTotalExentoSpecified = Metodos_General.EsNumero(Data[$"SubTotalExento"]),
+                                MontoSubTotal = Metodos_General.TryParseDecimal(Data, $"MontoSubTotal"),
+                                MontoSubTotalSpecified = Metodos_General.EsNumero(Data[$"MontoSubTotal"]),
                                 Lineas = Data["Lineas"],
                             };
                             // Agregar el objeto a la lista
@@ -402,7 +406,7 @@ namespace M_I_FE.Metodos
                     }
                     else
                     {
-                        break;
+
                     }
 
                 }
@@ -419,25 +423,25 @@ namespace M_I_FE.Metodos
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"NumeroSubTotal[{indice}]"))
+                    if (Data.ContainsKey($"NumeroLineaDoR[{indice}]"))
                     {
-                        if (Data[$"NumeroSubTotal[{indice}]"] != null)
+                        if (Data[$"NumeroLineaDoR[{indice}]"] != null)
                         {
 
                             ECF_44.ECFDescuentoORecargo data = new ECF_44.ECFDescuentoORecargo()
                             {
-                                NumeroLinea = Data[$"NumeroLinea[{indice}]"],
+                                NumeroLinea = Data[$"NumeroLineaDoR[{indice}]"],
                                 TipoAjuste = ObtenerTipoGeneral<ECF_44.TipoAjusteType>($"TipoAjuste[{indice}]"),
-                                DescripcionDescuentooRecargo = Data["DescripcionDescuentooRecargo"],
-                                TipoValor = ObtenerTipoGeneral<ECF_44.TipoDescuentoRecargoType>($"TipoValor[{indice}]"),
-                                TipoValorSpecified = Metodos_General.EsNumero(Data[$"TipoValor[{indice}]"]),
+                                DescripcionDescuentooRecargo = Data[$"DescripcionDescuentooRecargo[{indice}]"],
+                                TipoValor = ObtenerTipoGeneral<ECF_44.TipoDescuentoRecargoType>(Data[$"TipoValor[{indice}]"]),
+                                TipoValorSpecified = (Data[$"TipoValor[{indice}]"] != null),
                                 ValorDescuentooRecargo = Metodos_General.TryParseDecimal(Data, $"ValorDescuentooRecargo[{indice}]"),
                                 ValorDescuentooRecargoSpecified = Metodos_General.EsNumero(Data[$"ValorDescuentooRecargo[{indice}]"]),
                                 MontoDescuentooRecargo = Metodos_General.TryParseDecimal(Data, $"MontoDescuentooRecargo[{indice}]"),
                                 MontoDescuentooRecargoSpecified = Metodos_General.EsNumero(Data[$"MontoDescuentooRecargo[{indice}]"]),
                                 MontoDescuentooRecargoOtraMoneda = Metodos_General.TryParseDecimal(Data, $"MontoDescuentooRecargoOtraMoneda[{indice}]"),
                                 MontoDescuentooRecargoOtraMonedaSpecified = Metodos_General.EsNumero(Data[$"MontoDescuentooRecargoOtraMoneda[{indice}]"]),
-                                IndicadorFacturacionDescuentooRecargo = ObtenerTipoGeneral<ECF_44.IndicadorFacturacionDRType>($"IndicadorFacturacionDescuentooRecargo[{indice}]"),
+                                IndicadorFacturacionDescuentooRecargo = ObtenerTipoGeneral<ECF_44.IndicadorFacturacionDRType>(Data[$"IndicadorFacturacionDescuentooRecargo[{indice}]"]),
                                 IndicadorFacturacionDescuentooRecargoSpecified = Metodos_General.EsNumero(Data[$"IndicadorFacturacionDescuentooRecargo[{indice}]"]),
                             };
                             // Agregar el objeto a la lista
@@ -465,9 +469,9 @@ namespace M_I_FE.Metodos
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"NumeroSubTotal[{indice}]"))
+                    if (Data.ContainsKey($"PaginaNo[{indice}]"))
                     {
-                        if (Data[$"NumeroSubTotal[{indice}]"] != null)
+                        if (Data[$"PaginaNo[{indice}]"] != null)
                         {
 
                             ECF_44.ECFPagina data = new ECF_44.ECFPagina()
@@ -475,7 +479,6 @@ namespace M_I_FE.Metodos
                                 PaginaNo = Data[$"PaginaNo[{indice}]"],
                                 NoLineaDesde = Data[$"NoLineaDesde[{indice}]"],
                                 NoLineaHasta = Data[$"NoLineaHasta[{indice}]"],
-
                                 SubtotalImpuestoAdicionalPagina = Metodos_General.TryParseDecimal(Data, $"SubtotalImpuestoAdicionalPagina[{indice}]"),
                                 SubtotalImpuestoAdicionalPaginaSpecified = Metodos_General.EsNumero(Data[$"SubtotalImpuestoAdicionalPagina[{indice}]"]),
                                 SubtotalImpuestoAdicional = new ECF_44.ECFPaginaSubtotalImpuestoAdicional()
@@ -514,7 +517,7 @@ namespace M_I_FE.Metodos
             ECF_44.ECF eCF_44 = new ECF_44.ECF();
             eCF_44.Encabezado = new ECF_44.ECFEncabezado()
             {
-                Version = 1,
+                Version = Metodos_General.TryParseDecimal(Data, "Version"),
                 IdDoc = new ECF_44.ECFEncabezadoIdDoc()
                 {
                     TipoeCF = ECF_44.TipoeCFType.Item44,
@@ -528,6 +531,7 @@ namespace M_I_FE.Metodos
                     TerminoPago = Data["TerminoPago"],
                     TablaFormasPago = ObtenerValorECF_44.ObtenerTablaFormasPago(Data),
                     TipoCuentaPago = ObtenerValorECF_44.ObtenerTipoGeneral<ECF_44.TipoCuentaPagoType>(Data["TipoCuentaPago"]),
+                    TipoCuentaPagoSpecified = (Data["TipoCuentaPago"] != null),
                     NumeroCuentaPago = Data["NumeroCuentaPago"],
                     BancoPago = Data["BancoPago"],
                     FechaDesde = Data["FechaDesde"],
@@ -615,7 +619,6 @@ namespace M_I_FE.Metodos
                 },
                 Totales = new ECF_44.ECFEncabezadoTotales()
                 {
-
                     MontoExento = Metodos_General.TryParseDecimal(Data, "MontoExento"),
                     MontoExentoSpecified = Metodos_General.EsNumero(Data["MontoExento"]),
                     MontoImpuestoAdicional = Metodos_General.TryParseDecimal(Data, "MontoImpuestoAdicional"),
@@ -632,6 +635,7 @@ namespace M_I_FE.Metodos
                     MontoAvancePagoSpecified = Metodos_General.EsNumero(Data["MontoAvancePago"]),
                     ValorPagar = Metodos_General.TryParseDecimal(Data, "ValorPagar"),
                     ValorPagarSpecified = Metodos_General.EsNumero(Data["ValorPagar"]),
+
                 },
                 OtraMoneda = new ECF_44.ECFEncabezadoOtraMoneda()
                 {
@@ -667,9 +671,13 @@ namespace M_I_FE.Metodos
             {
                 serializer.Serialize(writer, eCF_44);
                 string xmlOutput = writer.ToString();
-
+                XmlDocument xmlDocument = new XmlDocument();
+                xmlDocument.LoadXml(xmlOutput);
+                Metodos_General.XmlCorrector.FindValuesNotInXml(Data, xmlDocument);
                 string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 44 v.1.0.xsd");
                 Console.WriteLine(a);
+
+                Metodos_General.SaveContentToFile(a, "44");
             }
         }
     }

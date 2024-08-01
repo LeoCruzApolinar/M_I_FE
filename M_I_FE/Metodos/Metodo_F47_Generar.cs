@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace M_I_FE.Metodos
@@ -11,6 +12,48 @@ namespace M_I_FE.Metodos
     {
         public class ObtenerValorECF_47()
         {
+            public static ECF_47.TipoMonedaType ObtenerMonedaPorCodigo(string codigo)
+            {
+                switch (codigo?.ToUpper()) // Convertimos el código a mayúsculas para asegurar la coincidencia
+                {
+                    case "BRL":
+                        return ECF_47.TipoMonedaType.BRL;
+                    case "CAD":
+                        return ECF_47.TipoMonedaType.CAD;
+                    case "CHF":
+                        return ECF_47.TipoMonedaType.CHF;
+                    case "CHY":
+                        return ECF_47.TipoMonedaType.CHY;
+                    case "XDR":
+                        return ECF_47.TipoMonedaType.XDR;
+                    case "DKK":
+                        return ECF_47.TipoMonedaType.DKK;
+                    case "EUR":
+                        return ECF_47.TipoMonedaType.EUR;
+                    case "GBP":
+                        return ECF_47.TipoMonedaType.GBP;
+                    case "JPY":
+                        return ECF_47.TipoMonedaType.JPY;
+                    case "NOK":
+                        return ECF_47.TipoMonedaType.NOK;
+                    case "SCP":
+                        return ECF_47.TipoMonedaType.SCP;
+                    case "SEK":
+                        return ECF_47.TipoMonedaType.SEK;
+                    case "USD":
+                        return ECF_47.TipoMonedaType.USD;
+                    case "VEF":
+                        return ECF_47.TipoMonedaType.VEF;
+                    case "HTG":
+                        return ECF_47.TipoMonedaType.HTG;
+                    case "MXN":
+                        return ECF_47.TipoMonedaType.MXN;
+                    default:
+                        return default;
+                }
+            }
+
+
             public static dynamic ObtenerTipoGeneral<T>(string codigo)
             {
                 if (codigo == null)
@@ -109,10 +152,11 @@ namespace M_I_FE.Metodos
                                 NumeroLinea = Data[$"NumeroLinea[{indice}]"],
                                 TablaCodigosItem = ObtenerCodigosItems(Data, indice),
                                 IndicadorFacturacion = ObtenerTipoGeneral<ECF_47.IndicadorFacturacionType>(Data[$"IndicadorFacturacion[{indice}]"]),
-                                Retencion = new ECF_47.ECFItemRetencion() 
+                                Retencion = new ECF_47.ECFItemRetencion()
                                 {
                                     IndicadorAgenteRetencionoPercepcion = ObtenerTipoGeneral<ECF_47.IndicadorAgenteRetencionoPercepcionType>(Data[$"IndicadorAgenteRetencionoPercepcion[{indice}]"]),
                                     MontoISRRetenido = Metodos_General.TryParseDecimal(Data, $"MontoISRRetenido[{indice}]"),
+                                   
 
                                 },
                                 NombreItem = Data[$"NombreItem[{indice}]"],
@@ -121,7 +165,6 @@ namespace M_I_FE.Metodos
                                 CantidadItem = Metodos_General.TryParseDecimal(Data, $"CantidadItem[{indice}]"),
                                 UnidadMedida = ObtenerTipoGeneral<ECF_47.UnidadMedidaType>(Data[$"UnidadMedida[{indice}]"]),
                                 UnidadMedidaSpecified = Metodos_General.EsNumero(Data[$"UnidadMedida[{indice}]"]),
-                                PrecioUnitarioItem = Metodos_General.TryParseDecimal(Data, $"PrecioUnitarioItem[{indice}]"),
                                 OtraMonedaDetalle = new ECF_47.ECFItemOtraMonedaDetalle()
                                 {
                                     PrecioOtraMoneda = Metodos_General.TryParseDecimal(Data, $"PrecioOtraMoneda[{indice}]"),
@@ -133,7 +176,7 @@ namespace M_I_FE.Metodos
                                     MontoItemOtraMoneda = Metodos_General.TryParseDecimal(Data, $"MontoItemOtraMoneda[{indice}]"),
                                     MontoItemOtraMonedaSpecified = Metodos_General.EsNumero(Data[$"MontoItemOtraMoneda[{indice}]"]),
                                 },
-
+                                PrecioUnitarioItem = Metodos_General.TryParseDecimal(Data, $"PrecioUnitarioItem[{indice}]"),
                                 MontoItem = Metodos_General.TryParseDecimal(Data, $"MontoItem[{indice}]"),
                             };
                             // Agregar el objeto a la lista
@@ -191,12 +234,12 @@ namespace M_I_FE.Metodos
             {
                 List<ECF_47.ECFSubtotal> ListaSubtotales = new List<ECF_47.ECFSubtotal>();
                 int indice = 1;
-                while (Data != null)
+                if (Data != null)
                 {
 
-                    if (Data.ContainsKey($"NumeroSubTotal[{indice}]"))
+                    if (Data.ContainsKey($"NumeroSubTotal"))
                     {
-                        if (Data[$"NumeroSubTotal[{indice}]"] != null)
+                        if (Data[$"NumeroSubTotal"] != null)
                         {
 
                             ECF_47.ECFSubtotal data = new ECF_47.ECFSubtotal()
@@ -204,13 +247,11 @@ namespace M_I_FE.Metodos
                                 NumeroSubTotal = Data["NumeroSubTotal"],
                                 DescripcionSubtotal = Data["DescripcionSubtotal"],
                                 Orden = Data["Orden"],
-                                MontoSubTotal = Metodos_General.TryParseDecimal(Data, $"MontoSubTotal[{indice}]"),
-                                MontoSubTotalSpecified = Metodos_General.EsNumero(Data[$"MontoSubTotal[{indice}]"]),
+                                SubTotalExento = Metodos_General.TryParseDecimal(Data, $"SubTotalExento"),
+                                SubTotalExentoSpecified = Metodos_General.EsNumero(Data[$"SubTotalExento"]),
+                                MontoSubTotal = Metodos_General.TryParseDecimal(Data, $"MontoSubTotal"),
+                                MontoSubTotalSpecified = Metodos_General.EsNumero(Data[$"MontoSubTotal"]),
                                 Lineas = Data["Lineas"],
-                                SubTotalExento = Metodos_General.TryParseDecimal(Data, $"SubTotalExento[{indice}]"),
-                                SubTotalExentoSpecified = Metodos_General.EsNumero(Data[$"SubTotalExento[{indice}]"]),
-
-
                             };
                             // Agregar el objeto a la lista
                             ListaSubtotales.Add(data);
@@ -220,7 +261,7 @@ namespace M_I_FE.Metodos
                     }
                     else
                     {
-                        break;
+
                     }
 
                 }
@@ -230,6 +271,7 @@ namespace M_I_FE.Metodos
                 return ListaSubtotales.Count == 0 ? default : ListaSubtotales.ToArray();
             }
 
+
             public static ECF_47.ECFPagina[] ObtenerECFPagina(Dictionary<string, string> Data)
             {
                 List<ECF_47.ECFPagina> ListaECFPagina = new List<ECF_47.ECFPagina>();
@@ -237,9 +279,9 @@ namespace M_I_FE.Metodos
                 while (Data != null)
                 {
 
-                    if (Data.ContainsKey($"NumeroSubTotal[{indice}]"))
+                    if (Data.ContainsKey($"PaginaNo[{indice}]"))
                     {
-                        if (Data[$"NumeroSubTotal[{indice}]"] != null)
+                        if (Data[$"PaginaNo[{indice}]"] != null)
                         {
 
                             ECF_47.ECFPagina data = new ECF_47.ECFPagina()
@@ -247,10 +289,10 @@ namespace M_I_FE.Metodos
                                 PaginaNo = Data[$"PaginaNo[{indice}]"],
                                 NoLineaDesde = Data[$"NoLineaDesde[{indice}]"],
                                 NoLineaHasta = Data[$"NoLineaHasta[{indice}]"],
-                                MontoSubtotalPagina = Metodos_General.TryParseDecimal(Data, $"MontoSubtotalPagina[{indice}]"),
-                                MontoSubtotalPaginaSpecified = Metodos_General.EsNumero(Data[$"MontoSubtotalPagina[{indice}]"]),
                                 SubtotalExentoPagina = Metodos_General.TryParseDecimal(Data, $"SubtotalExentoPagina[{indice}]"),
                                 SubtotalExentoPaginaSpecified = Metodos_General.EsNumero(Data[$"SubtotalExentoPagina[{indice}]"]),
+                                MontoSubtotalPagina = Metodos_General.TryParseDecimal(Data, $"MontoSubtotalPagina[{indice}]"),
+                                MontoSubtotalPaginaSpecified = Metodos_General.EsNumero(Data[$"MontoSubtotalPagina[{indice}]"]),
                             };
 
                             // Agregar el objeto a la lista
@@ -278,7 +320,7 @@ namespace M_I_FE.Metodos
             ECF_47.ECF eCF_47 = new ECF_47.ECF();
             eCF_47.Encabezado = new ECF_47.ECFEncabezado()
             {
-                Version = 1,
+                Version = Metodos_General.TryParseDecimal(Data, "Version"),
                 IdDoc = new ECF_47.ECFEncabezadoIdDoc()
                 {
                     TipoeCF = ECF_47.TipoeCFType.Item47,
@@ -320,17 +362,17 @@ namespace M_I_FE.Metodos
                 {
                     IdentificadorExtranjero = Data["IdentificadorExtranjero"],
                     RazonSocialComprador = Data["RazonSocialComprador"],
-
                 },
-
                 Transporte = new ECF_47.ECFEncabezadoTransporte()
                 {
-
                     PaisDestino = Data["PaisDestino"],
-
                 },
                 Totales = new ECF_47.ECFEncabezadoTotales()
                 {
+
+                    MontoExento = Metodos_General.TryParseDecimal(Data, "MontoExento"),
+                    MontoExentoSpecified = Metodos_General.EsNumero(Data["MontoExento"]),
+                    MontoTotal = Metodos_General.TryParseDecimal(Data, "MontoTotal"),
                     MontoPeriodo = Metodos_General.TryParseDecimal(Data, "MontoPeriodo"),
                     MontoPeriodoSpecified = Metodos_General.EsNumero(Data["MontoPeriodo"]),
                     SaldoAnterior = Metodos_General.TryParseDecimal(Data, "SaldoAnterior"),
@@ -339,19 +381,20 @@ namespace M_I_FE.Metodos
                     MontoAvancePagoSpecified = Metodos_General.EsNumero(Data["MontoAvancePago"]),
                     ValorPagar = Metodos_General.TryParseDecimal(Data, "ValorPagar"),
                     ValorPagarSpecified = Metodos_General.EsNumero(Data["ValorPagar"]),
-                    MontoExento = Metodos_General.TryParseDecimal(Data, "MontoExento"),
-                    MontoExentoSpecified = Metodos_General.EsNumero(Data["MontoExento"]),
+                    TotalISRRetencion = Metodos_General.TryParseDecimal(Data, "TotalISRRetencion"),
+                    TotalISRRetencionSpecified = Metodos_General.EsNumero(Data["TotalISRRetencion"]),
                 },
+                
                 OtraMoneda = new ECF_47.ECFEncabezadoOtraMoneda()
                 {
-                    TipoMoneda = ObtenerValorECF_47.ObtenerTipoGeneral<ECF_47.TipoMonedaType>(Data["TipoMoneda"]),
-                    TipoMonedaSpecified = Metodos_General.EsNumero(Data["TipoMoneda"]),
+                    TipoMoneda = ObtenerValorECF_47.ObtenerMonedaPorCodigo(Data["TipoMoneda"]),
+                    TipoMonedaSpecified = (Data["TipoMoneda"] != null),
                     TipoCambio = Metodos_General.TryParseDecimal(Data, "TipoCambio"),
                     TipoCambioSpecified = Metodos_General.EsNumero(Data["TipoCambio"]),
-                    MontoTotalOtraMoneda = Metodos_General.TryParseDecimal(Data, "MontoTotalOtraMoneda"),
-                    MontoTotalOtraMonedaSpecified = Metodos_General.EsNumero(Data["MontoTotalOtraMoneda"]),
                     MontoExentoOtraMoneda = Metodos_General.TryParseDecimal(Data, "MontoExentoOtraMoneda"),
                     MontoExentoOtraMonedaSpecified = Metodos_General.EsNumero(Data["MontoExentoOtraMoneda"]),
+                    MontoTotalOtraMoneda = Metodos_General.TryParseDecimal(Data, "MontoTotalOtraMoneda"),
+                    MontoTotalOtraMonedaSpecified = Metodos_General.EsNumero(Data["MontoTotalOtraMoneda"]),
 
                 },
             };
@@ -372,9 +415,13 @@ namespace M_I_FE.Metodos
             {
                 serializer.Serialize(writer, eCF_47);
                 string xmlOutput = writer.ToString();
-
+                XmlDocument xmlDocument = new XmlDocument();
+                xmlDocument.LoadXml(xmlOutput);
+                Metodos_General.XmlCorrector.FindValuesNotInXml(Data, xmlDocument);
                 string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 47 v.1.0.xsd");
                 Console.WriteLine(a);
+
+                Metodos_General.SaveContentToFile(a, "47");
             }
         }
     }

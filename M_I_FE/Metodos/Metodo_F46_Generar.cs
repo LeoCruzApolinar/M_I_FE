@@ -425,7 +425,7 @@ namespace M_I_FE.Metodos
             ECF_46.ECF eCF_46 = new ECF_46.ECF();
             eCF_46.Encabezado = new ECF_46.ECFEncabezado()
             {
-                Version = 1,
+                Version = Metodos_General.TryParseDecimal(Data, "Version"),
                 IdDoc = new ECF_46.ECFEncabezadoIdDoc()
                 {
                     TipoeCF = ECF_46.TipoeCFType.Item46,
@@ -611,6 +611,8 @@ namespace M_I_FE.Metodos
 
                 string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 46 v.1.0.xsd");
                 Console.WriteLine(a);
+
+                Metodos_General.SaveContentToFile(a, "46");
             }
         }
     }

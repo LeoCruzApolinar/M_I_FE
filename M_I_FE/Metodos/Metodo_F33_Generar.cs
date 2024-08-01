@@ -629,7 +629,7 @@ namespace M_I_FE.Metodos
             ECF_33.ECF eCF_33 = new ECF_33.ECF();
             eCF_33.Encabezado = new ECF_33.ECFEncabezado()
             {
-                Version = 1,
+                Version = Metodos_General.TryParseDecimal(Data, "Version"),
                 IdDoc = new ECF_33.ECFEncabezadoIdDoc()
                 {
                     TipoeCF = ECF_33.TipoeCFType.Item33,
@@ -827,7 +827,11 @@ namespace M_I_FE.Metodos
                 string xmlOutput = writer.ToString();
 
                 string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 33 v.1.0.xsd");
+
                 Console.WriteLine(a);
+
+                Metodos_General.SaveContentToFile(a, "33");
+
             }
         }
     }

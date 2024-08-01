@@ -1,4 +1,5 @@
-﻿using OfficeOpenXml;
+﻿using Microsoft.Extensions.Configuration;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -68,8 +69,6 @@ namespace M_I_FE.Metodos
                     }
 
                 }
-
-                Metodo_F31_Generar.Generar_XML_ECF31(list[0]);
             }
         }
     }
