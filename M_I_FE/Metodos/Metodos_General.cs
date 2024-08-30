@@ -129,8 +129,10 @@ namespace M_I_FE.Metodos
         /// <returns>El valor decimal si se encuentra y se analiza correctamente; de lo contrario, el valor predeterminado de decimal.</returns>
         public static decimal TryParseDecimal(Dictionary<string, string> data, string key)
         {
-            if (data.ContainsKey(key) && decimal.TryParse(data[key], out var result))
+            var val = data[key];
+            if (decimal.TryParse(val, out var result))
             {
+                result = Math.Round(result, 3);
                 return result;
             }
             else

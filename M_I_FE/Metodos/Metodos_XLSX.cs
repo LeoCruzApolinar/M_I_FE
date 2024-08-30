@@ -1,4 +1,6 @@
-﻿using OfficeOpenXml;
+﻿using Microsoft.Data.Sqlite;
+using OfficeOpenXml;
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -84,7 +86,78 @@ namespace M_I_FE.Metodos
             return filasConEstadoEnvioCero;
         }
 
+        public static List<Dictionary<string, string>> ObtenerFilasComprobante()
+        {
+            string connectionString = @"Data Source=E:\Proyectos\M_I_FE\M_I_FE\Datos\MIFE_DB.db;";
+            Batteries.Init();
+            // Lista para almacenar las filas
+            List<Dictionary<string, string>> filas = new List<Dictionary<string, string>>();
 
+            // Conectar a la base de datos
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+
+                // Comando SQL para seleccionar las filas con EstadoComprobante = 0
+                string query = @"
+                        SELECT 
+                            c.ID,
+                            c.FechaHoraRegistro,
+                            c.EstadoComprobante,
+                            c.EstadoFirma,
+                            c.EstadoEnvio,
+                            c.Version,
+                            a.*,
+                            b.*,
+                            d.*
+                        FROM 
+                            Comprobante c
+                        LEFT JOIN 
+                            Comprobante AS a ON c.ID_ComprobanteA = a.ID
+                        LEFT JOIN 
+                            Comprobante AS b ON c.ID_ComprobanteB = b.ID
+                        LEFT JOIN 
+                            Comprobante AS d ON c.ID_ComprobanteC = d.ID
+                        WHERE 
+                            c.EstadoComprobante = 0;
+                    ";
+
+
+                using (SqliteCommand command = new SqliteCommand(query, connection))
+                using (SqliteDataReader reader = command.ExecuteReader())
+                {
+                    // Iterar sobre cada fila obtenida
+                    while (reader.Read())
+                    {
+                        // Diccionario para almacenar los campos no nulos de cada fila
+                        Dictionary<string, string> fila = new Dictionary<string, string>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            // Obtenemos el nombre y valor del campo
+                            string columnName = reader.GetName(i);
+                            object value = reader.GetValue(i);
+
+                            // Convertir el valor a string
+                            if (value != DBNull.Value)
+                            {
+                                fila[columnName] = value.ToString();
+                            }
+                            else
+                            {
+                                fila[columnName] = null;
+                            }
+                            
+                        }
+
+                        // Agregar la fila al diccionario
+                        filas.Add(fila);
+                    }
+                }
+            }
+
+            return filas;
+        }
 
     }
 }
