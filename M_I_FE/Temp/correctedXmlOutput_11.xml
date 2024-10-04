@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -50,14 +50,14 @@
       <NumeroOrdenCompra>4500352238</NumeroOrdenCompra>
       <CodigoInternoComprador>10633440</CodigoInternoComprador>
     </Comprador>
-    
-    
+    <InformacionesAdicionales />
+    <Transporte />
     <Totales>
       <MontoExento>248292.00</MontoExento>
       <MontoTotal>248292.00</MontoTotal>
       <ValorPagar>248292.00</ValorPagar>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
@@ -68,7 +68,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -90,7 +90,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -101,7 +101,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -112,7 +112,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -123,7 +123,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -134,7 +134,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -145,7 +145,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -156,7 +156,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -167,7 +167,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -189,7 +189,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -200,7 +200,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -211,7 +211,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -222,7 +222,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -233,7 +233,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -244,7 +244,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -255,7 +255,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -266,7 +266,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -277,7 +277,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -288,7 +288,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -299,7 +299,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -310,7 +310,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -321,7 +321,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -332,7 +332,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -343,7 +343,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -354,7 +354,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -365,7 +365,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -376,7 +376,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -387,7 +387,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -398,7 +398,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -409,7 +409,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -420,7 +420,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -431,7 +431,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -442,7 +442,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -453,7 +453,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -464,7 +464,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -475,7 +475,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -486,7 +486,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -497,7 +497,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -508,7 +508,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -519,7 +519,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -530,7 +530,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -541,7 +541,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -552,7 +552,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -563,7 +563,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -574,7 +574,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -585,7 +585,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -596,7 +596,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -607,7 +607,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -618,7 +618,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -629,7 +629,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -640,7 +640,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -651,7 +651,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -662,7 +662,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -673,7 +673,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
     <Item>
@@ -684,7 +684,7 @@
       <CantidadItem>22.00</CantidadItem>
       <UnidadMedida>15</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>4840.00</MontoItem>
     </Item>
   </DetallesItems>
@@ -699,5 +699,5 @@
       <IndicadorFacturacionDescuentooRecargo>4</IndicadorFacturacionDescuentooRecargo>
     </DescuentoORecargo>
   </DescuentosORecargos>
-  
+  <InformacionReferencia />
 </ECF>

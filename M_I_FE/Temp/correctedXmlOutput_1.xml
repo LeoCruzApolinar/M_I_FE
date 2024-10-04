@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -42,8 +42,8 @@
       <NumeroOrdenCompra>4500352238</NumeroOrdenCompra>
       <CodigoInternoComprador>10633440</CodigoInternoComprador>
     </Comprador>
-    
-    
+    <InformacionesAdicionales />
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>3230.00</MontoGravadoTotal>
       <MontoGravadoI1>3230.00</MontoGravadoI1>
@@ -65,13 +65,13 @@
       </ImpuestosAdicionales>
       <MontoTotal>4674.35</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
       <NumeroLinea>1</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>PTE. CJ 24/12OZ</NombreItem>
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>2.00</CantidadItem>
@@ -95,9 +95,9 @@
           <TipoImpuesto>023</TipoImpuesto>
         </ImpuestoAdicional>
       </TablaImpuestoAdicional>
-      
+      <OtraMonedaDetalle />
       <MontoItem>3230.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

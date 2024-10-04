@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -28,7 +28,7 @@
       <MontoExento>700.00</MontoExento>
       <MontoTotal>700.00</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
@@ -39,9 +39,9 @@
       <CantidadItem>7.00</CantidadItem>
       <UnidadMedida>43</UnidadMedida>
       <PrecioUnitarioItem>100.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>700.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

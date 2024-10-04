@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -30,7 +30,7 @@
       <IdentificadorExtranjero>533445888</IdentificadorExtranjero>
       <RazonSocialComprador>ALEJA FERMIN SANTOS</RazonSocialComprador>
     </Comprador>
-    
+    <Transporte />
     <Totales>
       <MontoExento>180000.00</MontoExento>
       <MontoTotal>180000.00</MontoTotal>
@@ -73,5 +73,5 @@
       <Lineas>1</Lineas>
     </Subtotal>
   </Subtotales>
-  
+  <InformacionReferencia />
 </ECF>

@@ -378,7 +378,6 @@ namespace M_I_FE.Metodos
                     {
                         if (Data[$"TipoSubRecargo[{ind}][{indice}]"] != null)
                         {
-                            Console.WriteLine(Data[$"MontosubRecargo[{ind}][{indice}]"]);
                             ECF_32.ECFItemSubRecargo data = new ECF_32.ECFItemSubRecargo()
                             {
                                 TipoSubRecargo = ObtenerTipoGeneral<ECF_32.TipoDescuentoRecargoType>($"TipoSubRecargo[{ind}][{indice}]"),
@@ -811,14 +810,7 @@ namespace M_I_FE.Metodos
             using (StringWriter writer = new StringWriter())
             {
                 serializer.Serialize(writer, eCF_32);
-                string xmlOutput = writer.ToString();
-                XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.LoadXml(xmlOutput);
-                Metodos_General.XmlCorrector.FindValuesNotInXml(Data, xmlDocument);
-                string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 32 v.1.0.xsd");
-                Console.WriteLine(a);
-
-                Metodos_General.SaveContentToFile(a, "32");
+                Metodos_General.SaveContentToFile(writer.ToString(), "32");
             }
         }
     }

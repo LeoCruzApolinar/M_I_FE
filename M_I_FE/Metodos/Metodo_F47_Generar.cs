@@ -414,14 +414,7 @@ namespace M_I_FE.Metodos
             using (StringWriter writer = new StringWriter())
             {
                 serializer.Serialize(writer, eCF_47);
-                string xmlOutput = writer.ToString();
-                XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.LoadXml(xmlOutput);
-                Metodos_General.XmlCorrector.FindValuesNotInXml(Data, xmlDocument);
-                string a = Metodos_General.XmlCorrector.CorrectXml(xmlOutput, "E:\\Proyectos\\M_I_FE\\M_I_FE\\XSD\\e-CF 47 v.1.0.xsd");
-                Console.WriteLine(a);
-
-                Metodos_General.SaveContentToFile(a, "47");
+                Metodos_General.SaveContentToFile(writer.ToString(), "47");
             }
         }
     }

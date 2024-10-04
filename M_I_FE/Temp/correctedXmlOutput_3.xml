@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -46,7 +46,7 @@
       <NumeroContenedor>8019289</NumeroContenedor>
       <NumeroReferencia>1447</NumeroReferencia>
     </InformacionesAdicionales>
-    
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>15548.04</MontoGravadoTotal>
       <MontoGravadoI1>12363.56</MontoGravadoI1>
@@ -58,43 +58,43 @@
       <TotalITBIS2>509.52</TotalITBIS2>
       <MontoTotal>18283.00</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
       <NumeroLinea>1</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>MESAS INDUSTRIALES</NombreItem>
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>50.00</CantidadItem>
       <UnidadMedida>43</UnidadMedida>
       <PrecioUnitarioItem>220.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>11000.00</MontoItem>
     </Item>
     <Item>
       <NumeroLinea>2</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>JARRAS ACERO INOXIDABLE</NombreItem>
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>45.00</CantidadItem>
       <UnidadMedida>43</UnidadMedida>
       <PrecioUnitarioItem>85.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>3825.00</MontoItem>
     </Item>
     <Item>
       <NumeroLinea>3</NumeroLinea>
       <IndicadorFacturacion>2</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>YOGURT</NombreItem>
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>56.00</CantidadItem>
       <UnidadMedida>43</UnidadMedida>
       <PrecioUnitarioItem>67.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>3752</MontoItem>
     </Item>
   </DetallesItems>
@@ -116,5 +116,5 @@
       <IndicadorFacturacionDescuentooRecargo>2</IndicadorFacturacionDescuentooRecargo>
     </DescuentoORecargo>
   </DescuentosORecargos>
-  
+  <InformacionReferencia />
 </ECF>

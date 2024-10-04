@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -41,8 +41,8 @@
       <NumeroOrdenCompra>4500352238</NumeroOrdenCompra>
       <CodigoInternoComprador>10633440</CodigoInternoComprador>
     </Comprador>
-    
-    
+    <InformacionesAdicionales />
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>152800.00</MontoGravadoTotal>
       <MontoGravadoI1>27625.00</MontoGravadoI1>
@@ -56,7 +56,7 @@
       <MontoTotal>260550.50</MontoTotal>
       <ValorPagar>260550.50</ValorPagar>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
@@ -72,7 +72,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>25.00</RecargoMonto>
       <TablaSubRecargo>
@@ -81,7 +81,7 @@
           <MontoSubRecargo>25.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>5525.00</MontoItem>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>25.00</RecargoMonto>
       <TablaSubRecargo>
@@ -106,7 +106,7 @@
           <MontoSubRecargo>25.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>5525.00</MontoItem>
     </Item>
     <Item>
@@ -122,7 +122,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>25.00</RecargoMonto>
       <TablaSubRecargo>
@@ -131,7 +131,7 @@
           <MontoSubRecargo>25.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>5525.00</MontoItem>
     </Item>
     <Item>
@@ -147,7 +147,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>25.00</RecargoMonto>
       <TablaSubRecargo>
@@ -156,7 +156,7 @@
           <MontoSubRecargo>25.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>5525.00</MontoItem>
     </Item>
     <Item>
@@ -172,7 +172,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>25.00</RecargoMonto>
       <TablaSubRecargo>
@@ -181,7 +181,7 @@
           <MontoSubRecargo>25.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>5525.00</MontoItem>
     </Item>
     <Item>
@@ -191,7 +191,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>2500.00</PrecioUnitarioItem>
       <RecargoMonto>35.00</RecargoMonto>
       <TablaSubRecargo>
@@ -200,7 +200,7 @@
           <MontoSubRecargo>35.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>25035.00</MontoItem>
     </Item>
     <Item>
@@ -210,7 +210,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>2500.00</PrecioUnitarioItem>
       <RecargoMonto>35.00</RecargoMonto>
       <TablaSubRecargo>
@@ -219,7 +219,7 @@
           <MontoSubRecargo>35.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>25035.00</MontoItem>
     </Item>
     <Item>
@@ -229,7 +229,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>2500.00</PrecioUnitarioItem>
       <RecargoMonto>35.00</RecargoMonto>
       <TablaSubRecargo>
@@ -238,7 +238,7 @@
           <MontoSubRecargo>35.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>25035.00</MontoItem>
     </Item>
     <Item>
@@ -248,7 +248,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>2500.00</PrecioUnitarioItem>
       <RecargoMonto>35.00</RecargoMonto>
       <TablaSubRecargo>
@@ -257,7 +257,7 @@
           <MontoSubRecargo>35.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>25035.00</MontoItem>
     </Item>
     <Item>
@@ -267,7 +267,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>2500.00</PrecioUnitarioItem>
       <RecargoMonto>35.00</RecargoMonto>
       <TablaSubRecargo>
@@ -276,7 +276,7 @@
           <MontoSubRecargo>35.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>25035.00</MontoItem>
     </Item>
     <Item>
@@ -286,7 +286,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>50.00</RecargoMonto>
       <TablaSubRecargo>
@@ -295,7 +295,7 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>16550.00</MontoItem>
     </Item>
     <Item>
@@ -305,7 +305,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>50.00</RecargoMonto>
       <TablaSubRecargo>
@@ -314,7 +314,7 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>16550.00</MontoItem>
     </Item>
     <Item>
@@ -324,7 +324,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>50.00</RecargoMonto>
       <TablaSubRecargo>
@@ -333,7 +333,7 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>16550.00</MontoItem>
     </Item>
     <Item>
@@ -343,7 +343,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>50.00</RecargoMonto>
       <TablaSubRecargo>
@@ -352,7 +352,7 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>16550.00</MontoItem>
     </Item>
     <Item>
@@ -362,7 +362,7 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>6</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>1100.00</PrecioUnitarioItem>
       <RecargoMonto>50.00</RecargoMonto>
       <TablaSubRecargo>
@@ -371,9 +371,9 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>16550.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

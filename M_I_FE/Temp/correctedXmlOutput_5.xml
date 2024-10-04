@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -44,12 +44,12 @@
       <NumeroContenedor>8019289</NumeroContenedor>
       <NumeroReferencia>1447</NumeroReferencia>
     </InformacionesAdicionales>
-    
+    <Transporte />
     <Totales>
       <MontoExento>300000.00</MontoExento>
       <MontoTotal>300000.00</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
@@ -59,11 +59,11 @@
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>7500.00</CantidadItem>
       <UnidadMedida>47</UnidadMedida>
-      
+      <Mineria />
       <PrecioUnitarioItem>40.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>300000.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -42,8 +42,8 @@
       <NumeroOrdenCompra>4500352238</NumeroOrdenCompra>
       <CodigoInternoComprador>10633440</CodigoInternoComprador>
     </Comprador>
-    
-    
+    <InformacionesAdicionales />
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>118464.21</MontoGravadoTotal>
       <MontoGravadoI1>118464.21</MontoGravadoI1>
@@ -65,13 +65,13 @@
       </ImpuestosAdicionales>
       <MontoTotal>154003.47</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
       <NumeroLinea>1</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>Renta Total</NombreItem>
       <IndicadorBienoServicio>2</IndicadorBienoServicio>
       <CantidadItem>1.00</CantidadItem>
@@ -85,13 +85,13 @@
           <TipoImpuesto>004</TipoImpuesto>
         </ImpuestoAdicional>
       </TablaImpuestoAdicional>
-      
+      <OtraMonedaDetalle />
       <MontoItem>107766.57</MontoItem>
     </Item>
     <Item>
       <NumeroLinea>2</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>Uso total</NombreItem>
       <IndicadorBienoServicio>2</IndicadorBienoServicio>
       <CantidadItem>1.0</CantidadItem>
@@ -105,9 +105,9 @@
           <TipoImpuesto>004</TipoImpuesto>
         </ImpuestoAdicional>
       </TablaImpuestoAdicional>
-      
+      <OtraMonedaDetalle />
       <MontoItem>10697.64</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

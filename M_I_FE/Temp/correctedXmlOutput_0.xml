@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -52,7 +52,7 @@
       <NumeroContenedor>8019289</NumeroContenedor>
       <NumeroReferencia>1447</NumeroReferencia>
     </InformacionesAdicionales>
-    
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>6000.00</MontoGravadoTotal>
       <MontoGravadoI1>6000.00</MontoGravadoI1>
@@ -61,21 +61,21 @@
       <TotalITBIS1>1080.00</TotalITBIS1>
       <MontoTotal>7080.00</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
       <NumeroLinea>1</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>ASW DTU</NombreItem>
       <IndicadorBienoServicio>1</IndicadorBienoServicio>
       <CantidadItem>15.00</CantidadItem>
       <UnidadMedida>31</UnidadMedida>
       <PrecioUnitarioItem>400.00</PrecioUnitarioItem>
-      
+      <OtraMonedaDetalle />
       <MontoItem>6000.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>

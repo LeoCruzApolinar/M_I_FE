@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-16"?>
 <ECF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Encabezado>
     <Version>1.0</Version>
@@ -48,8 +48,8 @@
       <NumeroOrdenCompra>4500352238</NumeroOrdenCompra>
       <CodigoInternoComprador>10633440</CodigoInternoComprador>
     </Comprador>
-    
-    
+    <InformacionesAdicionales />
+    <Transporte />
     <Totales>
       <MontoGravadoTotal>38350.00</MontoGravadoTotal>
       <MontoGravadoI1>38350.00</MontoGravadoI1>
@@ -58,13 +58,13 @@
       <TotalITBIS1>6903.00</TotalITBIS1>
       <MontoTotal>45253.00</MontoTotal>
     </Totales>
-    
+    <OtraMoneda />
   </Encabezado>
   <DetallesItems>
     <Item>
       <NumeroLinea>1</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>Servicio domiciliario</NombreItem>
       <IndicadorBienoServicio>2</IndicadorBienoServicio>
       <CantidadItem>5.00</CantidadItem>
@@ -81,13 +81,13 @@
           <MontoSubDescuento>500.00</MontoSubDescuento>
         </SubDescuento>
       </TablaSubDescuento>
-      
+      <OtraMonedaDetalle />
       <MontoItem>9000.00</MontoItem>
     </Item>
     <Item>
       <NumeroLinea>2</NumeroLinea>
       <IndicadorFacturacion>1</IndicadorFacturacion>
-      
+      <Retencion />
       <NombreItem>Servicio presencial</NombreItem>
       <IndicadorBienoServicio>2</IndicadorBienoServicio>
       <CantidadItem>10.00</CantidadItem>
@@ -107,9 +107,9 @@
           <MontoSubRecargo>50.00</MontoSubRecargo>
         </SubRecargo>
       </TablaSubRecargo>
-      
+      <OtraMonedaDetalle />
       <MontoItem>29350.00</MontoItem>
     </Item>
   </DetallesItems>
-  
+  <InformacionReferencia />
 </ECF>
